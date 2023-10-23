@@ -10,6 +10,10 @@ const errorHandler = require("./middleware/error");
 
 
 
+// import routes
+const authRoutes = require('./routes/authRoutes')
+
+
 
 // database connection
 mongoose.connect(process.env.DATABASE, {
@@ -30,6 +34,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(cors());
+
+
+//Routes Middleware
+// app.get('/', (req,res) =>{
+//     res.send("Hello from JS");
+// })
+app.use('/api',authRoutes);
 
 //error middleware
 app.use(errorHandler);
