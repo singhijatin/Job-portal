@@ -1,3 +1,4 @@
+
 const User = require('../models/userModel');
 const ErrorResponse = require('../utils/errorResponse');
 
@@ -18,6 +19,7 @@ exports.signup = async (req, res, next) => {
         next(error);
     }
 }
+
 
 exports.signin = async (req, res, next) => {
 
@@ -57,6 +59,7 @@ const sendTokenResponse = async (user, codeStatus, res) => {
         .json({ success: true, token, user })
 }
 
+
 // log out
 exports.logout = (req, res, next) => {
     res.clearCookie('token');
@@ -67,3 +70,13 @@ exports.logout = (req, res, next) => {
 }
 
 
+// user profile
+exports.userProfile = async (req, res, next) => {
+
+    const user = await User.findById(req.user.id).select('-password');
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+}
