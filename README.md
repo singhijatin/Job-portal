@@ -3,9 +3,9 @@ This is a Full stack job App made with MERN Stack, MUI, Datagrid, cookie, etc.  
 
 ##### To use this app: clone this repo, in the root of bonus folder create a .env file with these variables PORT=9000 DATABASE=YOUR_MONGO_URL JWT_SECRET=fidbfbFCDSm1558 NODE_ENV=development if in development mode and NODE_ENV=production if you're deploying your App; after that, run "npm install" in the bonus root folder. Go inside frontend folder in bonus folder, run "npm install "
 
-![My Image](bonus/frontend/src/images/jobportaledit.png)
+![My Image](frontend/src/images/jobportaledit.png)
 
-![My Image](bonus/frontend/src/images/dashboardjob.png)
+![My Image](frontend/src/images/dashboardjob.png)
 
 
 
@@ -24,4 +24,5 @@ This is a Full stack job App made with MERN Stack, MUI, Datagrid, cookie, etc.  
 ##### - Search job, filter jobs by category and location;
 ##### - Apply for a job in the single page job, if the user is already log In;
 ##### - Toast notification;
+
 
